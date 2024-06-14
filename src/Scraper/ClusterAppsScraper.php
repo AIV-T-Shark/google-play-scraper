@@ -39,19 +39,19 @@ class ClusterAppsScraper implements ParseHandlerInterface
         $scriptDataInfo = null;
 
         foreach ($scriptData as $value) {
-            if (isset($value[0][1][0][21][0])) {
+            if (isset($value[0][1][0][21][0]) && is_array($value[0][1][0][21][0])) {
                 $scriptDataInfo = $value[0][1][0][21];
                 break;
             }
-            if (isset($value[0][1][0][22][0])) {
+            if (isset($value[0][1][0][22][0]) && is_array($value[0][1][0][22][0])) {
                 $scriptDataInfo = $value[0][1][0][22];
                 break;
             }
-            if (isset($value[0][1][1][21][0])) {
+            if (isset($value[0][1][1][21][0]) && is_array($value[0][1][1][21][0])) {
                 $scriptDataInfo = $value[0][1][1][21];
                 break;
             }
-            if (isset($value[0][1][1][22][0])) {
+            if (isset($value[0][1][1][22][0]) && is_array($value[0][1][1][22][0])) {
                 $scriptDataInfo = $value[0][1][1][22];
                 break;
             }
